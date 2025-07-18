@@ -1,0 +1,160 @@
+  * {
+      margin: 0;
+      padding: 0;
+    }
+
+
+    /* 1st navbar */
+    nav {
+      background-color: #c9c3c3;
+      color: white;
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-right {
+      margin-left: auto;
+      display: flex;
+      margin-right: 50px;
+
+    }
+
+    .nav-right a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+
+    .nav-right a:hover {
+      background-color: #555;
+    }
+
+
+
+
+/* 2nd navbar */
+
+
+.second-navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #ddd;
+      background-color: #fff;
+      position: relative;
+      z-index: 10;
+      margin: 2vh;
+    }
+
+    /* Logo */
+    .logo {
+      font-family: serif;
+      font-weight: 700;
+      font-size: 2rem;
+      line-height: 1.2;
+      color: #000;
+      cursor: pointer;
+      user-select: none;
+      margin-left: 8vh;
+    }
+
+    .logo span {
+      display: block;
+      font-size: 0.7rem;
+      font-weight: 400;
+      letter-spacing: 1px;
+      margin-top: 0.15rem;
+    }
+
+    /* Menu Links Container */
+    .menu {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      font-weight: 500;
+      font-size: 0.95rem;
+      margin-right: 5vh;
+    }
+
+    .menu li {
+      cursor: pointer;
+      white-space: nowrap;
+      transition: color 0.25s ease;
+    }
+
+    .menu li:hover {
+      color: #b88a4a; /* golden highlight */
+    }
+
+    /* Contact Button */
+    .btn-contact {
+      padding: 0.5rem 1.5rem;
+      background-color: #b88a4a;
+      color: #fff;
+      border: none;
+      /* font-weight: 600; */
+      font-size: 2rem;
+      cursor: pointer;
+      border-radius: 3px;
+      transition: background-color 0.25s ease;
+      white-space: nowrap;
+    }
+
+    .btn-contact:hover,
+    .btn-contact:focus {
+      background-color: #a1793e;
+      outline: none;
+    }
+
+
+    /* Mobile menu */
+    @media (max-width: 768px) {
+      .second-navbar{
+        padding: 1rem;
+      }
+      .menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        flex-direction: column;
+        align-items: start;
+        padding: 1rem 2rem;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        font-size: 1rem;
+        z-index: 9;
+      }
+
+      .menu.open {
+        max-height: 300px;
+      }
+
+      .menu li {
+        width: 100%;
+        padding: 0.75rem 0;
+        border-bottom: 1px solid #eee;
+      }
+
+      .btn-contact {
+        width: 100%;
+        text-align: center;
+        border-radius: 5px;
+        padding: 0.75rem 0;
+        font-size: 1.1rem;
+        font-weight: 700;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
